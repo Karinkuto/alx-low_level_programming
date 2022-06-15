@@ -1,14 +1,16 @@
-#include "main.h"
-
-char *_strcat(char *dest, char *src);
+#ifndef main_h
+char *_strcat(char *dest, char *src)
 {
-	int x, y;
-	for (x=0; dest[x] != "\0"; x++);
-	for (y=0; src[y] != "\0"; y++)
-	{
-		dest[x] = src[y];
-		x++;
-	}
-	dest[x] = "\0";
-	return (dest);
+    int s1, s2;
+
+    for (s1=0; dest[s1] != "\0"; s1++);
+    for (s2=0; src[s2] != "\0"; s2++)
+    {
+        dest[s1] = src[s2];
+        s1++;
+    }
+
+    return(dest);
 }
+#define main_h
+#endif
